@@ -1,13 +1,10 @@
-
 process.env['NODE_TLS_REJECT_UNAUTHORIZED'] = '0';
-// process.env['NODE_TLS_REJECT_UNAUTHORIZED'] = '1';
 
 import './config.js'
-
 import path, { join } from 'path'
 import { platform } from 'process'
 import { fileURLToPath, pathToFileURL } from 'url'
-import { createRequire } from 'module' // Bring in the ability to create the 'require' method
+import { createRequire } from 'module'
 global.__filename = function filename(pathURL = import.meta.url, rmPrefix = platform !== 'win32') { return rmPrefix ? /file:\/\/\//.test(pathURL) ? fileURLToPath(pathURL) : pathURL : pathToFileURL(pathURL).toString() }; global.__dirname = function dirname(pathURL) { return path.dirname(global.__filename(pathURL, true)) }; global.__require = function require(dir = import.meta.url) { return createRequire(dir) }
 import {
   readdirSync,
@@ -46,7 +43,6 @@ protoType()
 serialize()
 
 global.API = (name, path = '/', query = {}, apikeyqueryname) => (name in global.APIs ? global.APIs[name] : name) + path + (query || apikeyqueryname ? '?' + new URLSearchParams(Object.entries({ ...query, ...(apikeyqueryname ? { [apikeyqueryname]: global.APIKeys[name in global.APIs ? global.APIs[name] : name] } : {}) })) : '')
-// global.Fn = function functionCallBack(fn, ...args) { return fn.call(global.conn, ...args) }
 
 const __dirname = global.__dirname(import.meta.url)
 
@@ -90,33 +86,17 @@ const connectionOptions = {
   },
   getMessage: async key => {
     const jid = jidNormalizedUser(key.remoteJid);
-    const messageData = await store.loadMessage(jid, key.id);
-    return messageData?.message || '';
+    return ''; 
   },
   generateHighQualityLinkPreview: true,
   patchMessageBeforeSending: (message) => {
-    const requiresPatch = !!(
-      message.buttonsMessage
-      || message.templateMessage
-      || message.listMessage
-    );
+    const requiresPatch = !!(message.buttonsMessage || message.templateMessage || message.listMessage);
     if (requiresPatch) {
-      message = {
-        viewOnceMessage: {
-          message: {
-            messageContextInfo: {
-              deviceListMetadataVersion: 2,
-              deviceListMetadata: {},
-            },
-            ...message,
-          },
-        },
-      };
+      message = { viewOnceMessage: { message: { messageContextInfo: { deviceListMetadataVersion: 2, deviceListMetadata: {}, }, ...message, }, }, };
     }
-
     return message;
   },
-  connectTimeoutMs: 60000, defaultQueryTimeoutMs: 0, generateHighQualityLinkPreview: true, syncFullHistory: true, markOnlineOnConnect: true
+  connectTimeoutMs: 60000, defaultQueryTimeoutMs: 0, syncFullHistory: true, markOnlineOnConnect: true
 }
 
 global.conn = makeWASocket(connectionOptions)
@@ -143,86 +123,43 @@ if(global.db) {
 
 async function connectionUpdate(update) {
   const { receivedPendingNotifications, connection, lastDisconnect, isOnline, isNewLogin } = update;
-
-  if (isNewLogin) {
-    conn.isInit = true;
-  }
-
-  if (connection == 'connecting') {
-    console.log(chalk.redBright('⚡ Activating WatsonXdBot... Please wait.'));
-  } else if (connection == 'open') {
-    console.log(chalk.green('✅ Bot Connected'));
-  }
-
-  if (isOnline == true) {
-    console.log(chalk.green('The bot is Active.'));
-  } else if (isOnline == false) {
-    console.log(chalk.red('The bot is Offline.'));
-  }
-
-  if (receivedPendingNotifications) {
-    console.log(chalk.yellow('Waiting for a new message'));
-  }
-
+  if (isNewLogin) conn.isInit = true;
+  if (connection == 'connecting') console.log(chalk.redBright('⚡ Activating WatsonXdBot... Please wait.'));
+  else if (connection == 'open') console.log(chalk.green('✅ Bot Connected'));
+  if (isOnline == true) console.log(chalk.green('The bot is Active.'));
+  else if (isOnline == false) console.log(chalk.red('The bot is Offline.'));
+  if (receivedPendingNotifications) console.log(chalk.yellow('Waiting for a new message'));
   if (connection == 'close') {
     console.log(chalk.red('⏱️ Connection lost & trying to reconnect.'));
-  }
-
-  if (lastDisconnect && lastDisconnect.error && lastDisconnect.error.output && lastDisconnect.error.output.statusCode !== DisconnectReason.loggedOut && conn.ws.readyState !== CONNECTING) {
-    console.log(await global.reloadHandler(true));
-  }
-
-  if (global.db.data == null) {
-    await global.loadDatabase();
+    if (lastDisconnect && lastDisconnect.error && lastDisconnect.error.output && lastDisconnect.error.output.statusCode !== DisconnectReason.loggedOut) {
+        global.reloadHandler(true);
+    }
   }
 }
 
 process.on('uncaughtException', console.error)
-// let strQuot = /(["'])(?:(?=(\\?))\2.)*?\1/
 
 let isInit = true
 let handler = await import('./handler.js')
 global.reloadHandler = async function (restatConn) {
-  /*try {
-      const Handler = await import(`./handler.js?update=${Date.now()}`).catch(console.error)*/
   try {
-    // Jika anda menggunakan replit, gunakan yang sevenHoursLater dan tambahkan // pada const Handler
-    // Default: server/vps/panel, replit + 7 jam buat jam indonesia Jika Tidak Faham Pakai Milidetik 3600000 = 1 Jam Dan Kalikan 7 = 25200000
-    // const sevenHoursLater = Dateindonesia 7 * 60 * 60 * 1000;
     const Handler = await import(`./handler.js?update=${Date.now()}`).catch(console.error)
-    // const Handler = await import(`./handler.js?update=${sevenHoursLater}`).catch(console.error)
     if (Object.keys(Handler || {}).length) handler = Handler
   } catch (e) {
     console.error(e)
   }
+  
   if (restatConn) {
-    const oldChats = global.conn.chats
     try { global.conn.ws.close() } catch { }
-    conn.ev.removeAllListeners()
-    global.conn = makeWASocket(connectionOptions, { chats: oldChats })
-    isInit = true
-  }
-  if (!isInit) {
-    conn.ev.off('messages.upsert', conn.handler)
-    conn.ev.off('group-participants.update', conn.participantsUpdate)
-    conn.ev.off('groups.update', conn.groupsUpdate)
-    conn.ev.off('message.delete', conn.onDelete)
-    conn.ev.off('connection.update', conn.connectionUpdate)
-    conn.ev.off('creds.update', conn.credsUpdate)
+    global.conn = makeWASocket(connectionOptions)
   }
 
-  conn.welcome = 'Hi @user 👋 Welcome to @subject\n@desc'
-  conn.bye = 'Goodbye @user 👋'
-  conn.spromote = '@user is now an admin!'
-  conn.sdemote = '@user is no longer an admin!'
-  conn.sDesc = 'The group description has been changed to \n@desc'
-  conn.sSubject = 'The group title has been changed to \n@subject'
-  conn.sIcon = 'The group icon has been changed!'
-  conn.sRevoke = 'The group link has been changed to \n@revoke'
-  conn.sAnnounceOn = 'The group has been closed!\nNow only admins can send messages.'
-  conn.sAnnounceOff = 'The group has been opened!\nNow all participants can send messages.'
-  conn.sRestrictOn = 'Group Info Edit has been changed to admins only!'
-  conn.sRestrictOff = 'Group Info Edit has been changed to all participants!'
+  // REBIND LISTENERS TO GLOBAL.CONN
+  conn.ev.removeAllListeners('messages.upsert')
+  conn.ev.removeAllListeners('connection.update')
+  conn.ev.removeAllListeners('creds.update')
+  conn.ev.removeAllListeners('group-participants.update')
+  conn.ev.removeAllListeners('groups.update')
 
   conn.handler = handler.handler.bind(global.conn)
   conn.participantsUpdate = handler.participantsUpdate.bind(global.conn)
@@ -231,25 +168,18 @@ global.reloadHandler = async function (restatConn) {
   conn.connectionUpdate = connectionUpdate.bind(global.conn)
   conn.credsUpdate = saveCreds.bind(global.conn)
 
-  conn.ev.on('call', async (call) => {
-    console.log('Panggilan diterima:', call);
-    if (call.status === 'ringing') {
-      await conn.rejectCall(call.id);
-      console.log('Panggilan ditolak');
-    }
-  })
   conn.ev.on('messages.upsert', conn.handler)
   conn.ev.on('group-participants.update', conn.participantsUpdate)
   conn.ev.on('groups.update', conn.groupsUpdate)
   conn.ev.on('message.delete', conn.onDelete)
   conn.ev.on('connection.update', conn.connectionUpdate)
   conn.ev.on('creds.update', conn.credsUpdate)
+  
   isInit = false
   return true
-
 }
 
-const pluginFolder = global.__dirname(join(__dirname, './plugins/index'))
+const pluginFolder = join(__dirname, './plugins')
 const pluginFilter = filename => /\.js$/.test(filename)
 global.plugins = {}
 async function filesInit() {
@@ -259,94 +189,23 @@ async function filesInit() {
       const module = await import(file)
       global.plugins[filename] = module.default || module
     } catch (e) {
-      conn.logger.error(`❌ Failed to load plugins ${filename}: ${e}`)
-      delete global.plugins[filename]
+      console.error(`❌ Failed to load plugins ${filename}: ${e}`)
     }
   }
 }
+
 filesInit().then(_ => console.log(`Successfully Loaded ${Object.keys(global.plugins).length} Plugins`)).catch(console.error)
 
 global.reload = async (_ev, filename) => {
   if (pluginFilter(filename)) {
     let dir = global.__filename(join(pluginFolder, filename), true)
-    if (filename in global.plugins) {
-      if (existsSync(dir)) conn.logger.info(`re - require plugin '${filename}'`)
-      else {
-        conn.logger.warn(`deleted plugin '${filename}'`)
-        return delete global.plugins[filename]
-      }
-    } else conn.logger.info(`requiring new plugin '${filename}'`)
-    let err = syntaxerror(readFileSync(dir), filename, {
-      sourceType: 'module',
-      allowAwaitOutsideFunction: true
-    })
-    if (err) conn.logger.error(`syntax error while loading '${filename}'\n${format(err)}`)
-    else try {
+    try {
       const module = (await import(`${global.__filename(dir)}?update=${Date.now()}`))
       global.plugins[filename] = module.default || module
     } catch (e) {
-      conn.logger.error(`error require plugin '${filename}\n${format(e)}'`)
-    } finally {
-      global.plugins = Object.fromEntries(Object.entries(global.plugins).sort(([a], [b]) => a.localeCompare(b)))
+      console.error(`error require plugin '${filename}'`)
     }
   }
 }
-Object.freeze(global.reload)
 watch(pluginFolder, global.reload)
 await global.reloadHandler()
-
-// Quick Test
-
-async function _quickTest() {
-  let test = await Promise.all([
-    spawn('ffmpeg'),
-    spawn('ffprobe'),
-    spawn('ffmpeg', ['-hide_banner', '-loglevel', 'error', '-filter_complex', 'color', '-frames:v', '1', '-f', 'webp', '-']),
-    spawn('convert'),
-    spawn('magick'),
-    spawn('gm'),
-    spawn('find', ['--version'])
-  ].map(p => {
-    return Promise.race([
-      new Promise(resolve => {
-        p.on('close', code => {
-          resolve(code !== 127);
-        });
-      }),
-      new Promise(resolve => {
-        p.on('error', _ => resolve(false));
-      })
-    ]);
-  }));
-
-  let [ffmpeg, ffprobe, ffmpegWebp, convert, magick, gm, find] = test;
-  //console.log(test);
-
-  let s = global.support = {
-    ffmpeg,
-    ffprobe,
-    ffmpegWebp,
-    convert,
-    magick,
-    gm,
-    find
-  };
-
-  Object.freeze(global.support);
-
-  if (!s.ffmpeg) {
-    conn.logger.warn(`Please install ffmpeg first so that you can send videos`);
-  }
-
-  if (s.ffmpeg && !s.ffmpegWebp) {
-    conn.logger.warn('Stickers may not be animated without libwebp in ffmpeg (--enable-libwebp while compiling ffmpeg)');
-  }
-
-  if (!s.convert && !s.magick && !s.gm) {
-    conn.logger.warn('The Sticker feature may not work without ImageMagick and libwebp in ffmpeg installed (pkg install imagemagick)');
-  }
-}
-
-_quickTest()
-  .then(() => conn.logger.info('☑️ Quick Test Done, session file name ~> creds.json'))
-  .catch(console.error);

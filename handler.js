@@ -174,7 +174,7 @@ if (global.autorecording && typeof this.sendPresenceUpdate === 'function') {
         if (global.opts && global.opts['pconly'] && m.chat.endsWith('g.us')) return
         if (global.opts && global.opts['gconly'] && !m.chat.endsWith('g.us')) return
         
-        const isROwner = [conn.decodeJid(global.conn.user.id), ...global.owner.map(([number]) => number)].map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').includes(m.sender)
+        const isROwner = [this.decodeJid(this.user.id), ...global.owner.map(([number]) => number)].map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').includes(m.sender)
         const isOwner = isROwner || m.fromMe
         const isMods = isOwner || global.mods.map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').includes(m.sender)
         const isPrems = isROwner || (global.db.data.users[m.sender] && global.db.data.users[m.sender].premiumTime > 0)
@@ -189,15 +189,15 @@ if (global.autorecording && typeof this.sendPresenceUpdate === 'function') {
 
         let usedPrefix
         let _user = global.db.data && global.db.data.users && global.db.data.users[m.sender]
-        const groupMetadata = (m.isGroup ? ((conn.chats[m.chat] || {}).metadata || await this.groupMetadata(m.chat).catch(_ => null)) : {}) || {}
+        const groupMetadata = (m.isGroup ? ((this.chats[m.chat] || {}).metadata || await this.groupMetadata(m.chat).catch(_ => null)) : {}) || {}
         const participants = (m.isGroup ? groupMetadata.participants : []) || []
         
-        // Use the 'user' variable already declared above
-        user = (m.isGroup ? participants.find(u => (u.id === m.sender) || (u.jid === m.sender)) : {}) || {} 
+        // FIX: renamed to groupUser to prevent overwriting the 'user' object from database
+        const groupUser = (m.isGroup ? participants.find(u => (u.id === m.sender) || (u.jid === m.sender)) : {}) || {} 
         
         const bot = (m.isGroup ? participants.find(u => (u.id === this.user.jid) || (u.jid === this.user.jid)) : {}) || {} 
-        const isRAdmin = user?.admin == 'superadmin' || false
-        const isAdmin = isRAdmin || user?.admin == 'admin' || false 
+        const isRAdmin = groupUser?.admin == 'superadmin' || false
+        const isAdmin = isRAdmin || groupUser?.admin == 'admin' || false 
         const isBotAdmin = bot?.admin || false 
 
         const ___dirname = path.join(path.dirname(fileURLToPath(import.meta.url)), './plugins')
@@ -216,7 +216,7 @@ if (global.autorecording && typeof this.sendPresenceUpdate === 'function') {
                 } catch (e) {
                     console.error(e)
                     for (let [jid] of global.owner.filter(([number, _, isDeveloper]) => isDeveloper && number)) {
-                        let data = (await conn.onWhatsApp(jid))[0] || {}
+                        let data = (await this.onWhatsApp(jid))[0] || {}
                         if (data.exists)
                             m.reply(`*Plugin:* ${name}\n*Sender:* ${m.sender}\n*Chat:* ${m.chat}\n*Command:* ${m.text}\n\n\`\`\`${format(e)}\`\`\``.trim(), data.jid)
                     }
@@ -247,7 +247,7 @@ if (global.autorecording && typeof this.sendPresenceUpdate === 'function') {
                 _args = args.slice(0)
                 text = noPrefix
             } else {
-                const _prefix = conn && conn.prefix ? conn.prefix : global.prefix
+                const _prefix = this && this.prefix ? this.prefix : global.prefix
                 if (_prefix instanceof RegExp) {
                     const res = _prefix.exec(m.text || '')
                     if (res) {
@@ -407,7 +407,7 @@ if (global.autorecording && typeof this.sendPresenceUpdate === 'function') {
                     for (let key of Object.values(global.APIKeys)) text = text.replace(new RegExp(key, 'g'), '#HIDDEN#')
                     if (e.name) {
                         for (let [jid] of global.owner.filter(([number, _, isDeveloper]) => isDeveloper && number)) {
-                            let data = (await conn.onWhatsApp(jid))[0] || {}
+                            let data = (await this.onWhatsApp(jid))[0] || {}
                             if (data.exists) m.reply(`*🗂️ Plugin:* ${m.plugin}\n*👤 Sender:* ${m.sender}\n*💬 Chat:* ${m.chat}\n*💻 Command:* ${usedPrefix}${command} ${args.join(' ')}\n📄 *Error Logs:*\n\n\`\`\`${text}\`\`\``.trim(), data.jid)
                         }
                     }
@@ -469,7 +469,7 @@ export async function participantsUpdate({ id, participants, action, simulate = 
         case 'add':
         case 'remove':
             if (chat.welcome) {
-                let groupMetadata = (conn.chats[id] || {}).metadata || await this.groupMetadata(id)
+                let groupMetadata = (this.chats[id] || {}).metadata || await this.groupMetadata(id)
                 for (let user_part of participants) {
                     if (action === 'add') await delay(1000)
                     const userJid = await this.getJid(user_part, id)
@@ -504,9 +504,9 @@ export async function participantsUpdate({ id, participants, action, simulate = 
             }
             break
         case 'promote':
-            text = (chat.sPromote || this.spromote || conn.spromote || '@user ```is now Admin```')
+            text = (chat.sPromote || this.spromote || this.spromote || '@user ```is now Admin```')
         case 'demote':
-            if (!text) text = (chat.sDemote || this.sdemote || conn.sdemote || '@user ```is no longer Admin```')
+            if (!text) text = (chat.sDemote || this.sdemote || this.sdemote || '@user ```is no longer Admin```')
             text = text.replace('@user', '@' + participants[0].split('@')[0])
             if (chat.detect) this.sendMessage(id, { text, mentions: this.parseMention(text) })
             break
@@ -520,14 +520,14 @@ export async function groupsUpdate(groupsUpdate) {
         if (!id) continue
         let chats = global.db.data.chats[id], text = ''
         if (!chats?.detect) continue
-        if (groupUpdate.desc) text = (chats.sDesc || this.sDesc || conn.sDesc || '```Description has been changed to```\n@desc').replace('@desc', groupUpdate.desc)
-        if (groupUpdate.subject) text = (chats.sSubject || this.sSubject || conn.sSubject || '```Subject has been changed to```\n@subject').replace('@subject', groupUpdate.subject)
-        if (groupUpdate.icon) text = (chats.sIcon || this.sIcon || conn.sIcon || '```Icon has been changed to```').replace('@icon', groupUpdate.icon)
-        if (groupUpdate.revoke) text = (chats.sRevoke || this.sRevoke || conn.sRevoke || '```Group link has been changed to```\n@revoke').replace('@revoke', groupUpdate.revoke)
-        if (groupUpdate.announce == true) text = (chats.sAnnounceOn || this.sAnnounceOn || conn.sAnnounceOn || '*Group has been closed!*')
-        if (groupUpdate.announce == false) text = (chats.sAnnounceOff || this.sAnnounceOff || conn.sAnnounceOff || '*Group has been open!*')
-        if (groupUpdate.restrict == true) text = (chats.sRestrictOn || this.sRestrictOn || conn.sRestrictOn || '*Group has been all participants!*')
-        if (groupUpdate.restrict == false) text = (chats.sRestrictOff || this.sRestrictOff || conn.sRestrictOff || '*Group has been only admin!*')
+        if (groupUpdate.desc) text = (chats.sDesc || this.sDesc || this.sDesc || '```Description has been changed to```\n@desc').replace('@desc', groupUpdate.desc)
+        if (groupUpdate.subject) text = (chats.sSubject || this.sSubject || this.sSubject || '```Subject has been changed to```\n@subject').replace('@subject', groupUpdate.subject)
+        if (groupUpdate.icon) text = (chats.sIcon || this.sIcon || this.sIcon || '```Icon has been changed to```').replace('@icon', groupUpdate.icon)
+        if (groupUpdate.revoke) text = (chats.sRevoke || this.sRevoke || this.sRevoke || '```Group link has been changed to```\n@revoke').replace('@revoke', groupUpdate.revoke)
+        if (groupUpdate.announce == true) text = (chats.sAnnounceOn || this.sAnnounceOn || this.sAnnounceOn || '*Group has been closed!*')
+        if (groupUpdate.announce == false) text = (chats.sAnnounceOff || this.sAnnounceOff || this.sAnnounceOff || '*Group has been open!*')
+        if (groupUpdate.restrict == true) text = (chats.sRestrictOn || this.sRestrictOn || this.sRestrictOn || '*Group has been all participants!*')
+        if (groupUpdate.restrict == false) text = (chats.sRestrictOff || this.sRestrictOff || this.sRestrictOff || '*Group has been only admin!*')
         if (!text) continue
         this.reply(id, text.trim())
     }
@@ -542,7 +542,7 @@ export async function deleteUpdate(message) {
         let chat = global.db.data.chats[msg.chat] || {};
         if (!chat.antidelete) return;
         this.reply(msg.chat, `Detected @${participant.split`@` [0]} has deleted a message.\n\nUntuk mematikan fitur ini, ketik\n*.disable antidelete*`.trim(), msg);
-        this.copyNForward(msg.chat, msg).catch(e => console.log(e, msg));
+        this.copyNForward(msg.chat, msg).catch(e => console.error(e, msg));
     } catch (e) { console.error(e); }
 }
 
