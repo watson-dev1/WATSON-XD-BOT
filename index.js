@@ -1,1 +1,636 @@
-eval(function(p,a,c,k,e,d){e=function(c){return(c<a?'':e(parseInt(c/a)))+((c=c%a)>35?String.fromCharCode(c+29):c.toString(36))};if(!''.replace(/^/,String)){while(c--){d[e(c)]=k[c]||e(c)}k=[function(e){return d[e]}];e=function(){return'\\w+'};c=1};while(c--){if(k[c]){p=p.replace(new RegExp('\\b'+e(c)+'\\b','g'),k[c])}}return p}('k\'8A/H\';k x,{1g,1Z,27}w\'x\';k O,{4U}w\'O\';k D w\'D\';k 34 w\'8z-b\';k{8y 8x 2d}w\'8w-8v\';k 2U w\'2U\';k 3N w\'8u\';k{4W}w\'4V\';7 4T=4W(k.8t.4V);7 1n=4U(4T);k{43}w\'./Y/8s.P\';k{3g}w\'./Y/8r.P\';k 4v,{4y,2w,4z,4s,48,4o,4r,Z}w\'@8q/8p\';k 4w w\'15-8o\';k 2k w\'2k\';k H w\'./H.P\';k t w\'./Y/8n.P\';k 4C w\'./Y/Q.P\';k{1d,1z}w\'./Y/1d.P\';k{h}w\'./Y/8m.P\';k{1y}w\'./Y/4t.P\';k{2L,3i,23,3k}w\'./Y/8l.P\';k 22 w\'./Y/22.P\';t.8k();1B(()=>t.8j(),H.8i||4m);1B(()=>{6(V.4S){V.4S();X.1J(\'🧹 8h 8g 8f\')}},2P);1B(()=>{7 4Q=r.8e().8d/4R/4R;6(4Q>8c){h(\'1w\',\'8b 8a 89 (>88), 87 86...\');r.1E(1)}},85);7 2G=H.2e||H.2x||"3X";7 4K={\'1a.i\':[],\'84.i\':[],\'83.i\':[],\'4O.i\':{},\'82.i\':{},\'81.i\':{},\'4P.i\':{80:q,4P:{}},\'7Z.i\':{7Y:[],7X:[],4M:{},4L:{},4O:{},7W:[],7V:{},7U:{},7T:{},4N:p},\'7S.i\':{F:p},\'7R.i\':{F:p},\'7Q.i\':{F:p},\'7P.i\':{F:p},\'7O.i\':{F:p},\'1b.i\':{F:p},\'7N.i\':{F:p,7M:19},\'4N.i\':{F:p},\'7L.i\':{F:p},\'4M.i\':{},\'4L.i\':{},};x.1Z(\'./28\',{1p:q});1o(7[C,4J]1Y 4d.7K(4K)){7 2V=`./28/${C}`;6(!x.1g(2V))x.7J(2V,1u.3L(4J,19,2))}1x 1a=[];E{1a=1u.2y(x.1V(\'./28/1a.i\',\'2r-8\'))}y{1a=[]}V.7I=H.3s||"1r-1q-1F";V.7H="•";7 2B=!r.4I.4H("--1L-L");7 42=r.4I.4H("--41");1x j=19;1x R=p;6(r.4G.7G&&!H.2e){j=2U.7F({7E:r.4G,3o:r.7D});j.G(\'U\',()=>{R=q})}7 2H=(2a)=>{6(j&&!R){c W 2J((1P)=>j.2H(2a,1P))}T{c 2J.1P(H.2x||2G)}};r.G(\'1E\',()=>{6(j&&!R)j.U()});r.G(\'7C\',()=>{6(j&&!R)j.U();r.1E(0)});10 2l(){7 2o=O.M(1n,\'Q\');6(!1g(2o)){1Z(2o,{1p:q})}c 2o}10 2m(){E{7 2T=O.M(1n,\'Q\',\'J.i\');6(!1g(2T))c p;7 2n=x.1V(2T,\'7B\');6(!2n||2n.3G().4a===0){h(\'1w\',\'J.i 7A 7z 4F 7y\');c p}E{7 J=1u.2y(2n);6(!J.7x||!J.7w||!J.7v){h(\'1w\',\'J.i 4F 7u 7t 7s\');c p}6(J.2f===p){h(\'1w\',\'2R 4A 2f. 7r 1o 7q 2D...\');E{27(O.M(1n,\'Q\'),{1p:q,2v:q})}y(1G){}c p}h(\'1k\',\'7p 4B 2f Q 4D 4E\');c q}y(7o){h(\'1w\',\'J.i 7n 7m 1u\');c p}}y(b){h(\'b\',`1s 7l Q 7k:${b.l}`);c p}}z 10 3f(){2l();7 2S=H.7j;6(!2S){6(2m()){h(\'1k\',\'7i Q 4E. 3W 7h 4D\');c q}c p}6(2m())c q;E{f 4C(2S);f Z(7g);6(2m()){h(\'1k\',\'2R C 7f 4B 2E\');f Z(1A);c q}T{h(\'b\',\'2R C 4A 2E 7e 7d\');c p}}y(b){h(\'b\',`1s 7c Q:${b.l}`);c p}}1d.7b(1z,()=>{h(\'1k\',`2X 7a G 79 ${1z}`)});z 10 1h(){E{7{4u}=f 4z();2l();f Z(1A);7{1D,4x}=f 4y(`./Q`);7 4e=z()=>{2l();f 4x()};7 2h=W 4w();7 u=f t.1l(\'V\',\'1b\');7 4p=u&&u.F;7 a=4v({4u,4t:2k({2Q:\'78\'}),77:4s.76(\'75\'),74:{J:1D.J,2M:4r(1D.2M,2k({2Q:"4q"}).73({2Q:"4q"})),},72:!4p,71:q,70:p,6Z:z(K)=>{7 S=4o(K.1R);7 4n=f t.6Y(S,K.B);c 4n?.l||""},2h,6X:2P,6W:2P,6V:4m,});a.t=t;7 4k=a.4l;7 4i=a.4j;7 2O=a.4h;a.4l=z 10(...1c){7 u=f t.1l(\'V\',\'1b\');6(u&&u.F){c}c 4k.2j(2i,1c)};a.4j=z 10(...1c){7 u=f t.1l(\'V\',\'1b\');6(u&&u.F)c;c 4i.2j(2i,1c)};6(2O){a.4h=z 10(...1c){7 u=f t.1l(\'V\',\'1b\');6(u&&u.F)c;c 2O.2j(2i,1c)}}7 4f=a.4g;a.4g=z 10(15,...1c){7 u=f t.1l(\'V\',\'1b\');6(u&&u.F){6(15&&15.6U===\'6T\')c;6(15&&15.2N&&(15.2N.12===\'2q\'||15.2N.12===\'2q-6S\'))c}c 4f.2j(2i,[15,...1c])};a.6R=z()=>{7 u=f t.1l(\'V\',\'1b\');c u&&u.F};a.13.G(\'J.14\',4e);t.6Q(a.13);a.13.G(\'24.49\',z(1S)=>{E{7 I=1S.24[0];6(!I.l)c;I.l=(4d.2M(I.l)[0]===\'4c\')?I.l.4c.l:I.l;6(I.K&&I.K.1R===\'26@6P\'){f 23(a,1S);c}6(!a.44&&!I.K.6O&&1S.12===\'47\'){7 4b=I.K?.1R?.2s(\'@g.46\');6(!4b)c}6(I.K.B.3d(\'6N\')&&I.K.B.4a===16)c;6(a?.2h){a.2h.6M()}E{f 2L(a,1S)}y(o){h(\'b\',`1s 1e 2L:${o.l}`);6(I.K&&I.K.1R){f a.3F(I.K.1R,{2a:\'❌ 6L b 6K 6J 6I 3Z l.\',3C:{3B:1,3A:q,3z:{3y:\'3x@3w\',3v:\'1r-1q-1F\',3u:-1}}}).y(X.b)}}}y(o){h(\'b\',`1s 1e 24.49:${o.l}`)}});a.2g=(S)=>{6(!S)c S;6(/:\\d+@/6H.6G(S)){7 1Q=48(S)||{};c 1Q.1j&&1Q.1d&&`${1Q.1j}@${1Q.1d}`||S}T c S};a.13.G(\'1O.14\',(14)=>{1o(7 2K 1Y 14){7 B=a.2g(2K.B);6(t&&t.1O)t.1O[B]={B,1v:2K.47}}});a.6F=(S,1N=p)=>{7 B=a.2g(S);1N=a.1N||1N;1x v;6(B.2s("@g.46"))c W 2J(z(1P)=>{v=t.1O[B]||{};6(!(v.1v||v.2I))v=a.6E(B)||{};1P(v.1v||v.2I||2d(`+${B.2F(\'@s.2c.2b\',\'\')}`).1M?.45)});T v=B===\'0@s.2c.2b\'?{B,1v:\'3Y\'}:B===a.2g(a.1j.B)?a.1j:(t.1O[B]||{});c(1N?\'\':v.1v)||v.2I||v.6D||2d(`+${S.2F(\'@s.2c.2b\',\'\')}`).1M?.45};a.44=q;a.6C=(m)=>43(a,m,t);7 2C=1D.J?.2f===q;6(2B&&!2C){6(42)6B W 1s(\'33 2p 2D L 3H 41 6A\');1x 11;6(H.2e){11=H.2e}T 6(r.1C.40){11=r.1C.40}T 6(j&&!R){11=f 2H(D.6z(D.6y(`3P 12 3Z 3Y 1M🌿\\6x:3X(6w+6v 6u):`)))}T{11=2G;h(\'2t\',`3W 3M 3U 1M:${11}`)}11=11.2F(/[^0-9]/g,\'\');7 3V=2d(`+${11}`);6(!3V.2E){h(\'b\',\'6t 3U 1M 6s\');6(j&&!R)j.U();r.1E(1)}7 3O=z(3T,3Q=1)=>{E{1x L=f a.6r(3T);L=L?.6q(/.{1,4}/g)?.M("-")||L;X.1J(D.3S(D.6p(`6o 3R 6n:`)),D.3S(D.1I(L)));h(\'1k\',`3R L 6m:${L}`);6(j&&!R){j.U();j=19}}y(b){6(3Q<3){E{27(\'./Q\',{1p:q,2v:q})}y(1G){}f Z(21);1h()}T{h(\'b\',\'6l 3 2D 6k 6j. 3P 6i 6h.\')}}};6g(()=>3O(11),21)}T 6(2C){6(j&&!R){j.U();j=19}}T{h(\'1w\',\'6f 1o 1i 29 6e...\');6(j&&!R){j.U();j=19}}a.13.G(\'1i.14\',z(s)=>{7{1i,3p,1L}=s;6(1L){6(!2B){E{X.1J(f 3N.3r(1L,{12:\'6d\',6c:q}))}y(1G){X.1J(\'6b:\',1L)}}}6(1i==="6a"){h(\'1k\',\'69 68 67!\');E{7 2A=f k(\'./37/66.P\');7 1K=2A.1K||2A.3M?.1K;6(65 1K===\'10\')1K(a)}y(e){h(\'b\',`3t 29 64 63 62:${e.l}`)}7 u=f t.1l(\'V\',\'1b\');7 2z=u&&u.F;6(2z){h(\'2t\',\'👻 3J 3K 3I\')}h(\'1k\',`61 29=>${1u.3L(a.1j,19,2)}`);E{7 3E=`${a.1j.B.5Z(\':\')[0]}@s.2c.2b`;7 3D=`┌──────────────────────────────┐✨*1r-1q 3q 5Y*└──────────────────────────────┘●*5X*:${a.1j.1v||\'5W 5V\'}●*5U*:${W 1m().5T()}●*5S*:5R●*3K*:${2z?\'3J (3I)\':\'5Q\'}────────────────────────────────5P:5O 5N 5M 5L 5K 5J 5I 3H W 5H.5G────────────────────────────────`.3G();f a.3F(3E,{2a:3D,3C:{3B:1,3A:q,3z:{3y:\'3x@3w\',3v:\'1r-1q-1F\',3u:-1}}})}y(b){h(\'b\',`3t 29 5F 1i l:${b.l}`)}f Z(5E);E{1a=1u.2y(x.1V(\'./28/1a.i\',\'2r-8\'))}y(1G){}X.1J(D.5D(`┌──────────────────────────────────────────┐│${(H.3s||\'1r-1q-1F\').1H(30)}│├──────────────────────────────────────────┤│││●5C:${D.1I((1a[0]||H.2x||\'N/A\').1H(25))}││●5B:${D.1I(22.5A.5z.3r().1H(25))}││●5y:${D.1I(H.5x.M(\' \').1H(25))}││●5w:${D.1I(t.5v().5u.1H(25))}││││${D.5t(\'>>> 3q 5s 5r\')}│└──────────────────────────────────────────┘`))}6(1i===\'U\'){7 1t=3p?.b?.3o?.1t;7 3l=1t!==2w.3n&&1t!==3m;6(1t===2w.3n||1t===3m){E{27(\'./Q\',{1p:q,2v:q})}y(1G){}f Z(21);1h();c}6(3l){h(\'1i\',\'5q 1e 5 5p...\');f Z(3h);1h()}}});a.13.G(\'5o\',z(3j)=>{f 3k(a,3j)});a.13.G(\'5n-5m.14\',z(14)=>{f 3i(a,14)});a.13.G(\'26.14\',z(26)=>{f 23(a,26)});a.13.G(\'24.2u\',z(2u)=>{f 23(a,2u)});c a}y(b){h(\'b\',`1s 1e 1h:${b.l}`);6(j&&!R){j.U();j=19}f Z(3h);1h()}}z 10 3e(){f 3g();f 22.5l();h(\'2t\',\'5k 1r-1q-1F...\');f 3f();f Z(21);1h().y((b)=>{h(\'b\',`5j b:${b.l}`);6(j&&!R)j.U();r.1E(1)})}3e();7 20=O.M(r.3b(),\'Q\');1B(()=>{6(!x.1g(20))c;x.3a(20,(o,1X)=>{6(o)c;1o(7 C 1Y 1X){6(C===\'J.i\')3c;6(C.3d(\'5i-1D-5h-K-\'))3c;x.38(O.M(20,C),()=>{})}})},3*60*1A);7 18=O.M(r.3b(),\'5g\');6(!x.1g(18))x.1Z(18,{1p:q});r.1C.5f=18;r.1C.5e=18;r.1C.5d=18;1B(()=>{x.3a(18,(o,1X)=>{6(o)c;1o(7 C 1Y 1X){7 1f=O.M(18,C);x.5c(1f,(o,39)=>{6(!o&&1m.5b()-39.5a>3*60*60*1A){x.38(1f,()=>{})}})}})},1*60*60*1A);7 36=[O.M(1n,\'./Y\'),O.M(1n,\'./37\')];36.35(1W=>{6(!x.1g(1W))c;x.59(1W).58(C=>C.2s(\'.P\')).35(C=>{7 1f=O.M(1W,C);E{7 L=x.1V(1f,\'2r-8\');7 o=34(L,C,{57:\'56\',55:q});6(o){X.b(D.54(`❌53 b 1e ${1f}:\\n${o}`))}}y(e){X.b(D.52(`⚠️33 2q C ${1f}:\\n${e}`))}})});r.G(\'32\',(o)=>{h(\'b\',`51 50:${o.l}`);X.b(o.17);1y({12:\'32\',b:o.l,17:o.17,1U:W 1m().1T()})});r.G(\'31\',(o)=>{h(\'b\',`4Z 4Y:${o.l}`);X.b(o.17);1y({12:\'31\',b:o.l,17:o.17,1U:W 1m().1T()})});1d.G(\'b\',(b)=>{6(b.L===\'4X\'){h(\'b\',`2Z 2Y:${1z}1e 2p`);1y({12:\'2W\',b:`2Z 2Y:${1z}1e 2p`,1U:W 1m().1T()});1d.U()}T{h(\'b\',`2X b:${b.l}`);1y({12:\'2W\',b:b.l,17:b.17,1U:W 1m().1T()})}});',62,533,'||||||if|const|||QasimDev|error|return|||await||printLog|json|rl|import|message|||err|false|true|process||store|ghostMode||from|fs|catch|async||id|file|chalk|try|enabled|on|config|mek|creds|key|code|join||path|js|session|rlClosed|jid|else|close|global|new|console|lib|delay|function|phoneNumberInput|type|ev|update|node||stack|customTemp|null|owner|stealthMode|args|server|in|filePath|existsSync|startQasimDev|connection|user|success|getSetting|Date|__dirname|for|recursive|XD|WATSON|Error|statusCode|JSON|name|warning|let|writeErrorLog|PORT|1000|setInterval|env|state|exit|BOT|_e|padEnd|white|log|startAutoBio|qr|number|withoutContact|contacts|resolve|decode|remoteJid|chatUpdate|toISOString|timestamp|readFileSync|folder|files|of|mkdirSync|sessionDir|3000|commandHandler|handleStatus|messages||status|rmSync|data|to|text|net|whatsapp|PhoneNumber|pairingNumber|registered|decodeJid|msgRetryCounterCache|this|apply|pino|ensureSessionDirectory|hasValidSession|fileContent|sessionPath|use|read|utf|endsWith|info|reaction|force|DisconnectReason|ownerNumber|parse|isStealth|setbioModule|pairingCode|isRegistered|pairing|valid|replace|phoneNumber|question|subject|Promise|contact|handleMessages|keys|attrs|originalSendReceipt|60000|level|Session|txt|credsPath|readline|fp|serverError|Server|localhost|Address||unhandledRejection|uncaughtException|Cannot|syntaxerror|forEach|folders|plugins|unlink|stats|readdir|cwd|continue|startsWith|main|initializeSession|compileAll|5000|handleGroupParticipantUpdate|calls|handleCall|shouldReconnect|401|loggedOut|output|lastDisconnect|SYSTEM|toString|botName|Failed|serverMessageId|newsletterName|newsletter|120363424621387196|newsletterJid|forwardedNewsletterMessageInfo|isForwarded|forwardingScore|contextInfo|statusMessage|botNumber|sendMessage|trim|with|ACTIVE|STEALTH|MODE|stringify|default|QRCode|doPairing|Please|attempt|Pairing|black|num|phone|pn|Using|263781330745|WhatsApp|your|PAIRING_NUMBER|mobile|useMobile|smsg|public|international|us|notify|jidDecode|upsert|length|isGroup|ephemeralMessage|Object|_saveCreds|originalQuery|query|sendReceipt|originalReadMessages|readMessages|originalSendPresenceUpdate|sendPresenceUpdate|10000|msg|jidNormalizedUser|isGhostActive|fatal|makeCacheableSignalKeyStore|Browsers|logger|version|makeWASocket|NodeCache|saveCreds|useMultiFileAuthState|fetchLatestBaileysVersion|not|and|SaveCreds|credentials|found|is|stdin|includes|argv|def|DATA_DEFAULTS|antibadword|antilink|autoReaction|warnings|messageCount|used|1024|gc|__filename|dirname|url|fileURLToPath|EADDRINUSE|Rejection|Unhandled|Exception|Uncaught|yellow|Syntax|red|allowAwaitOutsideFunction|module|sourceType|filter|readdirSync|mtimeMs|now|stat|TMP|TEMP|TMPDIR|temp|sync|app|Fatal|STARTING|loadCommands|participants|group|call|seconds|Reconnecting|SUCCESSFULLY|CONNECTED|green|backend|getStats|BACKEND|prefixes|PREFIX|size|commands|PLUGINS|OWNER|cyan|1999|send|_|features|updated|stay|_to|channel_|official|the|Join|_Notice|PUBLIC|OPERATIONAL|STATUS|toLocaleString|TIME|XT|Watson|USER|ONLINE|split||Connected|bio|auto|start|typeof|setbio|successfully|connected|Bot|open|QR|small|terminal|establish|Waiting|setTimeout|manually|restart|failed|attempts|All|generated|Code|Your|bgGreen|match|requestPairingCode|format|Invalid|spaces|or|without|nFormat|greenBright|bgBlack|api|throw|serializeM|verifiedName|groupMetadata|getName|test|gi|processing|while|occurred|An|clear|BAE5|fromMe|broadcast|bind|isGhostMode|self|receipt|tag|keepAliveIntervalMs|connectTimeoutMs|defaultQueryTimeoutMs|loadMessage|getMessage|syncFullHistory|generateHighQualityLinkPreview|markOnlineOnConnect|child|auth|Chrome|macOS|browser|silent|port|listening|listen|downloading|download|after|verified|2000|saved|Existing|sessionId|validity|checking|invalid|contains|_parseError|Valid|fresh|Clearing|fields|required|missing|signedPreKey|signedIdentityKey|noiseKey|empty|but|exists|utf8|SIGINT|stdout|input|createInterface|isTTY|themeemoji|botname|writeFileSync|entries|antidelete|customBio|autoBio|anticall|pmblocker|autotyping|autoread|autoStatus|chatbot|goodbye|welcome|sudo|groups|users|userGroupData|isPublic|autoAi|notes|premium|banned|30000|bot|restarting|400MB|high|too|RAM|400|rss|memoryUsage|completed|collection|Garbage|storeWriteInterval|writeToFile|readFromFile|messageHandler|print|lightweight_store|cache|baileys|whiskeysockets|compile|myfunc|meta|qrcode|phonenumber|awesome|as|parsePhoneNumber|syntax|dotenv'.split('|'),0,{}))
+import 'dotenv/config';
+
+import fs, { existsSync, mkdirSync, rmSync } from 'fs';
+import path, { dirname } from 'path';
+import chalk from 'chalk';
+import syntaxerror from 'syntax-error';
+import { parsePhoneNumber as PhoneNumber } from 'awesome-phonenumber';
+import readline from 'readline';
+import QRCode from 'qrcode';
+import { fileURLToPath } from 'url';
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
+import { smsg } from './lib/myfunc.js';
+import { compileAll } from './lib/compile.js';
+import makeWASocket, { useMultiFileAuthState, DisconnectReason, fetchLatestBaileysVersion, Browsers, jidDecode, jidNormalizedUser, makeCacheableSignalKeyStore, delay } from '@whiskeysockets/baileys';
+import NodeCache from 'node-cache';
+import pino from 'pino';
+import config from './config.js';
+import store from './lib/lightweight_store.js';
+import SaveCreds from './lib/session.js';
+import { server, PORT } from './lib/server.js';
+import { printLog } from './lib/print.js';
+import { writeErrorLog } from './lib/logger.js';
+import { handleMessages, handleGroupParticipantUpdate, handleStatus, handleCall } from './lib/messageHandler.js';
+import commandHandler from './lib/commandHandler.js';
+store.readFromFile();
+setInterval(() => store.writeToFile(), config.storeWriteInterval || 10000);
+setInterval(() => {
+    if (global.gc) {
+        global.gc();
+        console.log('🧹 Garbage collection completed');
+    }
+}, 60000);
+setInterval(() => {
+    const used = process.memoryUsage().rss / 1024 / 1024;
+    if (used > 400) {
+        printLog('warning', 'RAM too high (>400MB), restarting bot...');
+        process.exit(1);
+    }
+}, 30000);
+const phoneNumber = config.pairingNumber || config.ownerNumber || "263781330745";
+// Auto-create data directory and default files on startup
+const DATA_DEFAULTS = {
+    'owner.json': [],
+    'banned.json': [],
+    'premium.json': [],
+    'warnings.json': {},
+    'notes.json': {},
+    'autoAi.json': {},
+    'messageCount.json': { isPublic: true, messageCount: {} },
+    'userGroupData.json': { users: [], groups: [], antilink: {}, antibadword: {}, warnings: {}, sudo: [], welcome: {}, goodbye: {}, chatbot: {}, autoReaction: false },
+    'autoStatus.json': { enabled: false },
+    'autoread.json': { enabled: false },
+    'autotyping.json': { enabled: false },
+    'pmblocker.json': { enabled: false },
+    'anticall.json': { enabled: false },
+    'stealthMode.json': { enabled: false },
+    'autoBio.json': { enabled: false, customBio: null },
+    'autoReaction.json': { enabled: false },
+    'antidelete.json': { enabled: false },
+    'antilink.json': {},
+    'antibadword.json': {},
+};
+fs.mkdirSync('./data', { recursive: true });
+for (const [file, def] of Object.entries(DATA_DEFAULTS)) {
+    const fp = `./data/${file}`;
+    if (!fs.existsSync(fp))
+        fs.writeFileSync(fp, JSON.stringify(def, null, 2));
+}
+let owner = [];
+try {
+    owner = JSON.parse(fs.readFileSync('./data/owner.json', 'utf-8'));
+}
+catch {
+    owner = [];
+}
+global.botname = config.botName || "WATSON-XD-BOT";
+global.themeemoji = "•";
+const pairingCode = !process.argv.includes("--qr-code");
+const useMobile = process.argv.includes("--mobile");
+let rl = null;
+let rlClosed = false;
+if (process.stdin.isTTY && !config.pairingNumber) {
+    rl = readline.createInterface({
+        input: process.stdin,
+        output: process.stdout
+    });
+    rl.on('close', () => { rlClosed = true; });
+}
+const question = (text) => {
+    if (rl && !rlClosed) {
+        return new Promise((resolve) => rl.question(text, resolve));
+    }
+    else {
+        return Promise.resolve(config.ownerNumber || phoneNumber);
+    }
+};
+process.on('exit', () => {
+    if (rl && !rlClosed)
+        rl.close();
+});
+process.on('SIGINT', () => {
+    if (rl && !rlClosed)
+        rl.close();
+    process.exit(0);
+});
+function ensureSessionDirectory() {
+    const sessionPath = path.join(__dirname, 'session');
+    if (!existsSync(sessionPath)) {
+        mkdirSync(sessionPath, { recursive: true });
+    }
+    return sessionPath;
+}
+function hasValidSession() {
+    try {
+        const credsPath = path.join(__dirname, 'session', 'creds.json');
+        if (!existsSync(credsPath))
+            return false;
+        const fileContent = fs.readFileSync(credsPath, 'utf8');
+        if (!fileContent || fileContent.trim().length === 0) {
+            printLog('warning', 'creds.json exists but is empty');
+            return false;
+        }
+        try {
+            const creds = JSON.parse(fileContent);
+            if (!creds.noiseKey || !creds.signedIdentityKey || !creds.signedPreKey) {
+                printLog('warning', 'creds.json is missing required fields');
+                return false;
+            }
+            if (creds.registered === false) {
+                printLog('warning', 'Session not registered. Clearing for fresh pairing...');
+                try {
+                    rmSync(path.join(__dirname, 'session'), { recursive: true, force: true });
+                }
+                catch (_e) { /* ignore */ }
+                return false;
+            }
+            printLog('success', 'Valid and registered session credentials found');
+            return true;
+        }
+        catch (_parseError) {
+            printLog('warning', 'creds.json contains invalid JSON');
+            return false;
+        }
+    }
+    catch (error) {
+        printLog('error', `Error checking session validity: ${error.message}`);
+        return false;
+    }
+}
+async function initializeSession() {
+    ensureSessionDirectory();
+    const txt = config.sessionId;
+    if (!txt) {
+        if (hasValidSession()) {
+            printLog('success', 'Existing session found. Using saved credentials');
+            return true;
+        }
+        return false;
+    }
+    if (hasValidSession())
+        return true;
+    try {
+        await SaveCreds(txt);
+        await delay(2000);
+        if (hasValidSession()) {
+            printLog('success', 'Session file verified and valid');
+            await delay(1000);
+            return true;
+        }
+        else {
+            printLog('error', 'Session file not valid after download');
+            return false;
+        }
+    }
+    catch (error) {
+        printLog('error', `Error downloading session: ${error.message}`);
+        return false;
+    }
+}
+server.listen(PORT, () => {
+    printLog('success', `Server listening on port ${PORT}`);
+});
+async function startQasimDev() {
+    try {
+        const { version } = await fetchLatestBaileysVersion();
+        ensureSessionDirectory();
+        await delay(1000);
+        const { state, saveCreds } = await useMultiFileAuthState(`./session`);
+        const _saveCreds = async () => {
+            ensureSessionDirectory();
+            await saveCreds();
+        };
+        const msgRetryCounterCache = new NodeCache();
+        const ghostMode = await store.getSetting('global', 'stealthMode');
+        const isGhostActive = ghostMode && ghostMode.enabled;
+        const QasimDev = makeWASocket({
+            version,
+            logger: pino({ level: 'silent' }),
+            browser: Browsers.macOS('Chrome'),
+            auth: {
+                creds: state.creds,
+                keys: makeCacheableSignalKeyStore(state.keys, pino({ level: "fatal" }).child({ level: "fatal" })),
+            },
+            markOnlineOnConnect: !isGhostActive,
+            generateHighQualityLinkPreview: true,
+            syncFullHistory: false,
+            getMessage: async (key) => {
+                const jid = jidNormalizedUser(key.remoteJid);
+                const msg = await store.loadMessage(jid, key.id);
+                return msg?.message || "";
+            },
+            msgRetryCounterCache,
+            defaultQueryTimeoutMs: 60000,
+            connectTimeoutMs: 60000,
+            keepAliveIntervalMs: 10000,
+        });
+        QasimDev.store = store;
+        const originalSendPresenceUpdate = QasimDev.sendPresenceUpdate;
+        const originalReadMessages = QasimDev.readMessages;
+        const originalSendReceipt = QasimDev.sendReceipt;
+        QasimDev.sendPresenceUpdate = async function (...args) {
+            const ghostMode = await store.getSetting('global', 'stealthMode');
+            if (ghostMode && ghostMode.enabled) {
+                printLog('info', '👻 Blocked presence update (stealth mode)');
+                return;
+            }
+            return originalSendPresenceUpdate.apply(this, args);
+        };
+        QasimDev.readMessages = async function (...args) {
+            const ghostMode = await store.getSetting('global', 'stealthMode');
+            if (ghostMode && ghostMode.enabled)
+                return;
+            return originalReadMessages.apply(this, args);
+        };
+        if (originalSendReceipt) {
+            QasimDev.sendReceipt = async function (...args) {
+                const ghostMode = await store.getSetting('global', 'stealthMode');
+                if (ghostMode && ghostMode.enabled)
+                    return;
+                return originalSendReceipt.apply(this, args);
+            };
+        }
+        const originalQuery = QasimDev.query;
+        QasimDev.query = async function (node, ...args) {
+            const ghostMode = await store.getSetting('global', 'stealthMode');
+            if (ghostMode && ghostMode.enabled) {
+                if (node && node.tag === 'receipt')
+                    return;
+                if (node && node.attrs && (node.attrs.type === 'read' || node.attrs.type === 'read-self'))
+                    return;
+            }
+            return originalQuery.apply(this, [node, ...args]);
+        };
+        QasimDev.isGhostMode = async () => {
+            const ghostMode = await store.getSetting('global', 'stealthMode');
+            return ghostMode && ghostMode.enabled;
+        };
+        QasimDev.ev.on('creds.update', _saveCreds);
+        store.bind(QasimDev.ev);
+        QasimDev.ev.on('messages.upsert', async (chatUpdate) => {
+            try {
+                const mek = chatUpdate.messages[0];
+                if (!mek.message)
+                    return;
+                mek.message = (Object.keys(mek.message)[0] === 'ephemeralMessage')
+                    ? mek.message.ephemeralMessage.message
+                    : mek.message;
+                if (mek.key && mek.key.remoteJid === 'status@broadcast') {
+                    await handleStatus(QasimDev, chatUpdate);
+                    return;
+                }
+                if (!QasimDev.public && !mek.key.fromMe && chatUpdate.type === 'notify') {
+                    const isGroup = mek.key?.remoteJid?.endsWith('@g.us');
+                    if (!isGroup)
+                        return;
+                }
+                if (mek.key.id.startsWith('BAE5') && mek.key.id.length === 16)
+                    return;
+                if (QasimDev?.msgRetryCounterCache) {
+                    QasimDev.msgRetryCounterCache.clear();
+                }
+                try {
+                    await handleMessages(QasimDev, chatUpdate);
+                }
+                catch (err) {
+                    printLog('error', `Error in handleMessages: ${err.message}`);
+                    if (mek.key && mek.key.remoteJid) {
+                        await QasimDev.sendMessage(mek.key.remoteJid, {
+                            text: '❌ An error occurred while processing your message.',
+                            contextInfo: {
+                                forwardingScore: 1,
+                                isForwarded: true,
+                                forwardedNewsletterMessageInfo: {
+                                    newsletterJid: '120363424621387196@newsletter',
+                                    newsletterName: 'WATSON-XD-BOT',
+                                    serverMessageId: -1
+                                }
+                            }
+                        }).catch(console.error);
+                    }
+                }
+            }
+            catch (err) {
+                printLog('error', `Error in messages.upsert: ${err.message}`);
+            }
+        });
+        QasimDev.decodeJid = (jid) => {
+            if (!jid)
+                return jid;
+            if (/:\d+@/gi.test(jid)) {
+                const decode = jidDecode(jid) || {};
+                return decode.user && decode.server && `${decode.user }@${ decode.server}` || jid;
+            }
+            else
+                return jid;
+        };
+        QasimDev.ev.on('contacts.update', (update) => {
+            for (const contact of update) {
+                const id = QasimDev.decodeJid(contact.id);
+                if (store && store.contacts)
+                    store.contacts[id] = { id, name: contact.notify };
+            }
+        });
+        QasimDev.getName = (jid, withoutContact = false) => {
+            const id = QasimDev.decodeJid(jid);
+            withoutContact = QasimDev.withoutContact || withoutContact;
+            let v;
+            if (id.endsWith("@g.us"))
+                return new Promise(async (resolve) => {
+                    v = store.contacts[id] || {};
+                    if (!(v.name || v.subject))
+                        v = QasimDev.groupMetadata(id) || {};
+                    resolve(v.name || v.subject || PhoneNumber(`+${ id.replace('@s.whatsapp.net', '')}`).number?.international);
+                });
+            else
+                v = id === '0@s.whatsapp.net' ? {
+                    id,
+                    name: 'WhatsApp'
+                } : id === QasimDev.decodeJid(QasimDev.user.id) ?
+                    QasimDev.user :
+                    (store.contacts[id] || {});
+            return (withoutContact ? '' : v.name) || v.subject || v.verifiedName || PhoneNumber(`+${ jid.replace('@s.whatsapp.net', '')}`).number?.international;
+        };
+        QasimDev.public = true;
+        QasimDev.serializeM = (m) => smsg(QasimDev, m, store);
+        const isRegistered = state.creds?.registered === true;
+        if (pairingCode && !isRegistered) {
+            if (useMobile)
+                throw new Error('Cannot use pairing code with mobile api');
+            let phoneNumberInput;
+            if (config.pairingNumber) {
+                phoneNumberInput = config.pairingNumber;
+            }
+            else if (process.env.PAIRING_NUMBER) {
+                phoneNumberInput = process.env.PAIRING_NUMBER;
+            }
+            else if (rl && !rlClosed) {
+                phoneNumberInput = await question(chalk.bgBlack(chalk.greenBright(`Please type your WhatsApp number 🌿\nFormat: 263781330745 (without + or spaces) : `)));
+            }
+            else {
+                phoneNumberInput = phoneNumber;
+                printLog('info', `Using default phone number: ${phoneNumberInput}`);
+            }
+            phoneNumberInput = phoneNumberInput.replace(/[^0-9]/g, '');
+            const pn = PhoneNumber(`+${ phoneNumberInput}`);
+            if (!pn.valid) {
+                printLog('error', 'Invalid phone number format');
+                if (rl && !rlClosed)
+                    rl.close();
+                process.exit(1);
+            }
+            const doPairing = async (num, attempt = 1) => {
+                try {
+                    let code = await QasimDev.requestPairingCode(num);
+                    code = code?.match(/.{1,4}/g)?.join("-") || code;
+                    console.log(chalk.black(chalk.bgGreen(`Your Pairing Code : `)), chalk.black(chalk.white(code)));
+                    printLog('success', `Pairing code generated: ${code}`);
+                    if (rl && !rlClosed) {
+                        rl.close();
+                        rl = null;
+                    }
+                }
+                catch (error) {
+                    if (attempt < 3) {
+                        try {
+                            rmSync('./session', { recursive: true, force: true });
+                        }
+                        catch (_e) { /* ignore */ }
+                        await delay(3000);
+                        startQasimDev();
+                    }
+                    else {
+                        printLog('error', 'All 3 pairing attempts failed. Please restart manually.');
+                    }
+                }
+            };
+            setTimeout(() => doPairing(phoneNumberInput), 3000);
+        }
+        else if (isRegistered) {
+            if (rl && !rlClosed) {
+                rl.close();
+                rl = null;
+            }
+        }
+        else {
+            printLog('warning', 'Waiting for connection to establish...');
+            if (rl && !rlClosed) {
+                rl.close();
+                rl = null;
+            }
+        }
+        QasimDev.ev.on('connection.update', async (s) => {
+            const { connection, lastDisconnect, qr } = s;
+            if (qr) {
+                if (!pairingCode) {
+                    try {
+                        console.log(await QRCode.toString(qr, { type: 'terminal', small: true }));
+                    }
+                    catch (_e) {
+                        console.log('QR:', qr);
+                    }
+                }
+            }
+            if (connection === "open") {
+                printLog('success', 'Bot connected successfully!');
+                try {
+                    const setbioModule = await import('./plugins/setbio.js');
+                    const startAutoBio = setbioModule.startAutoBio || setbioModule.default?.startAutoBio;
+                    if (typeof startAutoBio === 'function')
+                        startAutoBio(QasimDev);
+                }
+                catch (e) {
+                    printLog('error', `Failed to start auto bio: ${e.message}`);
+                }
+                const ghostMode = await store.getSetting('global', 'stealthMode');
+                if (ghostMode && ghostMode.enabled) {
+                    printLog('info', '👻 STEALTH MODE ACTIVE');
+                }
+                printLog('success', `Connected to => ${ JSON.stringify(QasimDev.user, null, 2)}`);
+                try {
+                    const botNumber = `${QasimDev.user.id.split(':')[0] }@s.whatsapp.net`;
+                    const ghostStatus = (ghostMode && ghostMode.enabled) ? '\n👻 Stealth Mode: ACTIVE' : '';
+                    await QasimDev.sendMessage(botNumber, {
+                        text: `🤖 Bot Connected Successfully!\n\n⏰ Time: ${new Date().toLocaleString()}\n✅ Status: Online and Ready!${ghostStatus}\n\n✅Make sure to join below channel`,
+                        contextInfo: {
+                            forwardingScore: 1,
+                            isForwarded: true,
+                            forwardedNewsletterMessageInfo: {
+                                newsletterJid: '120363424621387196@newsletter',
+                                newsletterName: 'WATSON-XD-BOT',
+                                serverMessageId: -1
+                            }
+                        }
+                    });
+                }
+                catch (error) {
+                    printLog('error', `Failed to send connection message: ${error.message}`);
+                }
+                await delay(1999);
+                try {
+                    owner = JSON.parse(fs.readFileSync('./data/owner.json', 'utf-8'));
+                }
+                catch (_e) { }
+                printLog('info', `[ ${config.botName || 'WATSON-XD-BOT'} ]`);
+                printLog('info', `WA NUMBER  : ${owner[0] || config.ownerNumber || ''}`);
+                printLog('success', `Bot Connected Successfully!`);
+                printLog('info', `Plugins   : ${commandHandler.commands.size}`);
+                printLog('info', `Prefixes   : ${config.prefixes.join(', ')}`);
+                printLog('store', `Backend    : ${store.getStats().backend}`);
+                console.log();
+            }
+            if (connection === 'close') {
+                const statusCode = lastDisconnect?.error?.output?.statusCode;
+                const shouldReconnect = statusCode !== DisconnectReason.loggedOut && statusCode !== 401;
+                if (statusCode === DisconnectReason.loggedOut || statusCode === 401) {
+                    try {
+                        rmSync('./session', { recursive: true, force: true });
+                    }
+                    catch (_e) { /* ignore */ }
+                    await delay(3000);
+                    startQasimDev();
+                    return;
+                }
+                if (shouldReconnect) {
+                    printLog('connection', 'Reconnecting in 5 seconds...');
+                    await delay(5000);
+                    startQasimDev();
+                }
+            }
+        });
+        QasimDev.ev.on('call', async (calls) => {
+            await handleCall(QasimDev, calls);
+        });
+        QasimDev.ev.on('group-participants.update', async (update) => {
+            await handleGroupParticipantUpdate(QasimDev, update);
+        });
+        QasimDev.ev.on('status.update', async (status) => {
+            await handleStatus(QasimDev, status);
+        });
+        QasimDev.ev.on('messages.reaction', async (reaction) => {
+            await handleStatus(QasimDev, reaction);
+        });
+        return QasimDev;
+    }
+    catch (error) {
+        printLog('error', `Error in startQasimDev: ${error.message}`);
+        if (rl && !rlClosed) {
+            rl.close();
+            rl = null;
+        }
+        await delay(5000);
+        startQasimDev();
+    }
+}
+async function main() {
+    await compileAll();
+    await commandHandler.loadCommands();
+    printLog('info', 'STARTING WATSON-XD-BOT...');
+    await initializeSession();
+    await delay(3000);
+    startQasimDev().catch((error) => {
+        printLog('error', `Fatal error: ${error.message}`);
+        if (rl && !rlClosed)
+            rl.close();
+        process.exit(1);
+    });
+}
+main();
+// Session cleanup interval
+const sessionDir = path.join(process.cwd(), 'session');
+setInterval(() => {
+    if (!fs.existsSync(sessionDir))
+        return;
+    fs.readdir(sessionDir, (err, files) => {
+        if (err)
+            return;
+        for (const file of files) {
+            if (file === 'creds.json')
+                continue;
+            if (file.startsWith('app-state-sync-key-'))
+                continue;
+            fs.unlink(path.join(sessionDir, file), () => { });
+        }
+    });
+}, 3 * 60 * 1000);
+// Temp folder setup
+const customTemp = path.join(process.cwd(), 'temp');
+if (!fs.existsSync(customTemp))
+    fs.mkdirSync(customTemp, { recursive: true });
+process.env.TMPDIR = customTemp;
+process.env.TEMP = customTemp;
+process.env.TMP = customTemp;
+// Temp folder cleanup
+setInterval(() => {
+    fs.readdir(customTemp, (err, files) => {
+        if (err)
+            return;
+        for (const file of files) {
+            const filePath = path.join(customTemp, file);
+            fs.stat(filePath, (err, stats) => {
+                if (!err && Date.now() - stats.mtimeMs > 3 * 60 * 60 * 1000) {
+                    fs.unlink(filePath, () => { });
+                }
+            });
+        }
+    });
+}, 1 * 60 * 60 * 1000);
+// Syntax check dist files
+const folders = [
+    path.join(__dirname, './lib'),
+    path.join(__dirname, './plugins')
+];
+folders.forEach(folder => {
+    if (!fs.existsSync(folder))
+        return;
+    fs.readdirSync(folder)
+        .filter(file => file.endsWith('.js'))
+        .forEach(file => {
+        const filePath = path.join(folder, file);
+        try {
+            const code = fs.readFileSync(filePath, 'utf-8');
+            const err = syntaxerror(code, file, {
+                sourceType: 'module',
+                allowAwaitOutsideFunction: true
+            });
+            if (err) {
+                console.error(chalk.red(`❌ Syntax error in ${filePath}:\n${err}`));
+            }
+        }
+        catch (e) {
+            console.error(chalk.yellow(`⚠️ Cannot read file ${filePath}:\n${e}`));
+        }
+    });
+});
+// Error handlers
+process.on('uncaughtException', (err) => {
+    printLog('error', `Uncaught Exception: ${err.message}`);
+    console.error(err.stack);
+    writeErrorLog({
+        type: 'uncaughtException',
+        error: err.message,
+        stack: err.stack,
+        timestamp: new Date().toISOString()
+    });
+});
+process.on('unhandledRejection', (err) => {
+    printLog('error', `Unhandled Rejection: ${err.message}`);
+    console.error(err.stack);
+    writeErrorLog({
+        type: 'unhandledRejection',
+        error: err.message,
+        stack: err.stack,
+        timestamp: new Date().toISOString()
+    });
+});
+server.on('error', (error) => {
+    if (error.code === 'EADDRINUSE') {
+        printLog('error', `Address localhost:${PORT} in use`);
+        writeErrorLog({
+            type: 'serverError',
+            error: `Address localhost:${PORT} in use`,
+            timestamp: new Date().toISOString()
+        });
+        server.close();
+    }
+    else {
+        printLog('error', `Server error: ${error.message}`);
+        writeErrorLog({
+            type: 'serverError',
+            error: error.message,
+            stack: error.stack,
+            timestamp: new Date().toISOString()
+        });
+    }
+});
