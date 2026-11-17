@@ -1,5 +1,5 @@
 /*          Bot Settings                         */
-export const owner = "628xxx"
+export const owner = "263789622747"
 export const namabot = "WATSON-XD-BOT"
 export const namaowner = "DennCode"
 export const idch = "120363xxxxxx@newsletter"
